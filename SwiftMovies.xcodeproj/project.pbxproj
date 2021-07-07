@@ -13,6 +13,7 @@
 		D0C0A82F26959199004DE9DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C0A82E26959199004DE9DF /* Preview Assets.xcassets */; };
 		D0C0A83A26959199004DE9DF /* SwiftMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0A83926959199004DE9DF /* SwiftMoviesTests.swift */; };
 		D0C0A84526959199004DE9DF /* SwiftMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0A84426959199004DE9DF /* SwiftMoviesUITests.swift */; };
+		D0C0A8612695A801004DE9DF /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0A8602695A801004DE9DF /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		D0C0A84026959199004DE9DF /* SwiftMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0A84426959199004DE9DF /* SwiftMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMoviesUITests.swift; sourceTree = "<group>"; };
 		D0C0A84626959199004DE9DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C0A8602695A801004DE9DF /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				D0C0A82726959198004DE9DF /* SwiftMoviesApp.swift */,
 				D0C0A82926959198004DE9DF /* ContentView.swift */,
+				D0C0A85F2695A7C3004DE9DF /* Components */,
 				D0C0A82B26959199004DE9DF /* Assets.xcassets */,
 				D0C0A83026959199004DE9DF /* Info.plist */,
 				D0C0A82D26959199004DE9DF /* Preview Content */,
@@ -128,6 +131,14 @@
 				D0C0A84626959199004DE9DF /* Info.plist */,
 			);
 			path = SwiftMoviesUITests;
+			sourceTree = "<group>";
+		};
+		D0C0A85F2695A7C3004DE9DF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D0C0A8602695A801004DE9DF /* RatingView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C0A8612695A801004DE9DF /* RatingView.swift in Sources */,
 				D0C0A82A26959198004DE9DF /* ContentView.swift in Sources */,
 				D0C0A82826959198004DE9DF /* SwiftMoviesApp.swift in Sources */,
 			);
