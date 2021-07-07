@@ -10,7 +10,7 @@ import SwiftUI
 struct RatingView: View {
     
     @State var rating: Double
-    private let circleStrokeWidth: CGFloat = 15
+    private let circleStrokeWidth: CGFloat = 7
     
     private func trimPercent () -> CGFloat {
         let percentage = rating * 10 / 100
@@ -32,9 +32,8 @@ struct RatingView: View {
                     .animation(.easeInOut)
                 Text(String(rating))
                     .bold()
-                    .font(.largeTitle)
             }
-            .frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: 45, height: 45, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         }
     }
 }
