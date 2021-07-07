@@ -13,9 +13,9 @@ struct MovieElementView: View {
     let movie: Movie
     
     var body: some View {
-        VStack {
-            HStack(alignment: .center, spacing: 10) {
-                KFImage(movie.imageUrl)
+        VStack(alignment: .leading) {
+            HStack(alignment: .top, spacing: 10) {
+                KFImage(movie.posterPath)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 175, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -25,13 +25,12 @@ struct MovieElementView: View {
                         Text(movie.title)
                             .font(.title2)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .lineLimit(3)
                         Spacer()
-                        RatingView(rating: movie.rating)
+                        RatingView(rating: movie.voteAverage)
                     }
-                    Text(movie.description)
+                    Text(movie.overview)
+                        .frame(width: .infinity, height: 150, alignment: .top)
                 })
-                .frame(width: .infinity, height: 200, alignment: .center)
             }
         }
         .padding()
