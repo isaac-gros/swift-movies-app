@@ -42,28 +42,21 @@ struct PopularMoviesView: View {
             guard let data = data else { return }
             
             do {
-                let anyJson = try JSONSerialization.jsonObject(with: data)
-                let convertedJson = anyJson as! [String: Any]
-                let results = convertedJson["results"] as? [[String: Any]]
-                
-                // TODO : Better Movie instance creations
-                movies.removeAll()
-                for result in results! {
+                let restMoviesResult = try JSONDecoder().decode(RestMovieResult.self, from: data)
+                for movie in restMoviesResult.movies {
                     movies.append(
                         Movie(
-                            id: result["id"] as! Int,
-                            title: result["title"] as! String,
-                            overview: result["overview"] as! String,
-                            voteAverage: result["vote_average"] as! Double,
-                            posterPath: MOVIES_IMAGES_BASE_URL + (result["poster_path"] as! String)
+                            id: movie.id,
+                            title: movie.title,
+                            overview: movie.overview,
+                            voteAverage: movie.voteAverage,
+                            posterPath: URL(string: MOVIES_IMAGES_BASE_URL + (movie.posterPath ?? ""))
                         )
                     )
                 }
-                
                 isLoading = false
-                
             } catch {
-                content = "Une erreur s'est produite, veuillez réessayer."
+                print("Erreur lors du décodage")
             }
         }
         

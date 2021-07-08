@@ -13,7 +13,7 @@ struct PreviewData {
         title: "Shrek",
         overview: "Shrek, l'ogre le plus terrifiant de tout le royaume, se voit menacé d'expulsion par les habitants de Fort Fort Lointain, exténués de sa présence.",
         voteAverage: 8.9,
-        posterPath: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535"
+        posterPath: URL(string: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535")
     )
     
     static let defaultMoviesList = [
@@ -22,21 +22,21 @@ struct PreviewData {
            title: "Shrek",
            overview: "Shrek, l'ogre le plus terrifiant de tout le royaume, se voit menacé d'expulsion par les habitants de Fort Fort Lointain, exténués de sa présence.",
            voteAverage: 8.9,
-           posterPath: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535"
+           posterPath: URL(string: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535")
        ),
         Movie(
            id: 2,
            title: "Shrek",
            overview: "Shrek, l'ogre le plus terrifiant de tout le royaume, se voit menacé d'expulsion par les habitants de Fort Fort Lointain, exténués de sa présence.",
            voteAverage: 8.9,
-           posterPath: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535"
+           posterPath: URL(string: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535")
        ),
         Movie(
            id: 3,
            title: "Shrek",
            overview: "Shrek, l'ogre le plus terrifiant de tout le royaume, se voit menacé d'expulsion par les habitants de Fort Fort Lointain, exténués de sa présence.",
            voteAverage: 8.9,
-           posterPath: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535"
-       )
+           posterPath: URL(string: "https://static.wikia.nocookie.net/rise-of-the-brave-tangled-dragons/images/8/85/Shrek_2001_poster.jpg/revision/latest?cb=20210327083535")
+       ),
     ]
 }

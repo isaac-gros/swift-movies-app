@@ -21,13 +21,13 @@ struct MovieElementView: View {
                 .clipped()
             VStack(alignment: .leading, spacing: 15, content: {
                 HStack {
-                    Text(movie.title)
+                    Text(movie.title!)
                         .font(.title2)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     Spacer()
-                    RatingView(rating: movie.voteAverage)
+                    RatingView(rating: movie.voteAverage!)
                 }
-                Text(movie.overview)
+                Text(movie.overview!)
                     .lineLimit(4)
             })
         }

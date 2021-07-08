@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RatingView: View {
     
-    @State var rating: Double
+    @State var rating: Float
     private let circleStrokeWidth: CGFloat = 7
     
     private func trimPercent () -> CGFloat {

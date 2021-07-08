@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
+        NavigationView {
             PopularMoviesView()
-                .tabItem { Label("Populaires", systemImage: "star") }
+                .navigationTitle("Populaires")
         }
     }
 }
