@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PopularMoviesView: View {
     
+    @State var movies: [Movie] = []
     @State var isLoading: Bool = true
-    @State var content: String = ""
-    @State var movies: [Movie]
+    @State var content: String = "Chargement..."
     
     var body: some View {
         
@@ -19,6 +19,7 @@ struct PopularMoviesView: View {
             if isLoading {
                 ProgressView()
                     .onAppear(perform: loadPopularMovies)
+                Text(content)
             } else {
                 List {
                     ForEach(movies) { movie in
@@ -72,6 +73,6 @@ struct PopularMoviesView: View {
 
 struct PopularMoviesView_Previews: PreviewProvider {
     static var previews: some View {
-        PopularMoviesView(isLoading: true, content: "", movies: PreviewData.defaultMoviesList)
+        PopularMoviesView(movies: PreviewData.defaultMoviesList)
     }
 }

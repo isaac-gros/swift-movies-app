@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        PopularMoviesView(isLoading: true, content: "", movies: PreviewData.defaultMoviesList)
+        TabView {
+            PopularMoviesView()
+                .tabItem { Label("Populaires", systemImage: "star") }
+        }
     }
 }
 
